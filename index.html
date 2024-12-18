@@ -2,19 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>WOO TODOList</title>
+    <title>나의 할일</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="js/todo.js" defer></script>
+    <script src="js/todo.js"></script>
   </head>
   <body>
-    <h1>TODO List</h1>
+    <h1>나의 할일</h1>
     <form name="frmTodo" autocomplete="off">
       <dl>
-        <dt>제목</dt>
+        <dt>작업 제목</dt>
         <dd>
           <input type="text" name="title" />
           <div class="error dn" id="error-title"></div>
@@ -28,7 +28,7 @@
         </dd>
       </dl>
       <dl>
-        <dt>내용</dt>
+        <dt>작업 내용</dt>
         <dd>
           <textarea name="description"></textarea>
           <div class="error dn" id="error-description"></div>
