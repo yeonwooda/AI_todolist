@@ -11,10 +11,10 @@
     <script src="js/todo.js"></script>
   </head>
   <body>
-    <h1>할일</h1>
+    <h1>나의 할일</h1>
     <form name="frmTodo" autocomplete="off">
       <dl>
-        <dt>제목</dt>
+        <dt>작업 제목</dt>
         <dd>
           <input type="text" name="title" />
           <div class="error dn" id="error-title"></div>
@@ -28,7 +28,7 @@
         </dd>
       </dl>
       <dl>
-        <dt>내용</dt>
+        <dt>작업 내용</dt>
         <dd>
           <textarea name="description"></textarea>
           <div class="error dn" id="error-description"></div>
@@ -36,6 +36,22 @@
       </dl>
       <button type="submit">등록하기</button>
     </form>
+
     <ul class="items"></ul>
+
+    <script type="text/html" id="tpl">
+      <li class="item" data-seq="#{seq}">
+        <div class="tit-wrap">
+          <span class="date">#{deadline}</span>
+          <span class="tit">#{title}</span>
+        </div>
+        <div class="description">
+          #{description}
+          <button type="button" class="remove">
+            <i class="xi-close"></i>
+          </button>
+        </div>
+      </li>
+    </script>
   </body>
 </html>
