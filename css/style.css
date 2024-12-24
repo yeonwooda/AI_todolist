@@ -86,27 +86,133 @@ h1 {
 
 #frmTodo dt {
   margin-bottom: 5px;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
+  margin-top: 30px;
 }
 
 .error {
   color: red;
   margin: 7px 0;
+  font-size: 1.2rem;
+}
+
+#frmTodo button[type="submit"] {
+  background: #000;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+}
+
+#frmTodo button[type="submit"]:hover {
+  background: #333;
+}
+
+.search-box {
+  display: flex;
+  margin: 25px 0 15px 0;
+}
+
+.search-box input[type="text"] {
+  width: 0;
+  flex-grow: 2;
+}
+
+.search-box select {
+  width: 0;
+  flex-grow: 1;
+  margin-left: 5px;
 }
 
 /* 할일 등록 양식 E */
 
 /* 할일 목록 S */
+.items > .item {
+  padding: 10px 0;
+}
+
+.items > .item + .item {
+  border-top: 1px dashed #ccc;
+}
+
+.items > .item .tit-wrap {
+  font-size: 1.5rem;
+}
+
 .items > .item .description {
   display: none;
+  transition: all 0.5s;
 }
 
 .items > .item.on .description {
-  display: block;
+  display: flex;
 }
 
-.items > .item.done {
+.items .description {
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+}
+
+.items .description .content {
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  margin-top: 15px;
+  flex-grow: 1;
+  font-size: 1.2rem;
+}
+
+.items .controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+
+  font-size: 1.3rem;
+}
+
+.items .controls .remove {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #fff;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.items .controls .remove i {
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.items > .item.done .tit-wrap {
   text-decoration: line-through;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  padding: 0 20px 0 33px;
+  height: 40px;
+  line-height: 40px;
+  background: url("../images/radio.png") no-repeat left center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background: url("../images/radio_on.png") no-repeat left center;
 }
 
 /* 할일 목록 E */
